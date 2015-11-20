@@ -9,7 +9,8 @@ RUN apt-get -qq update && \
         zlib1g-dev \
         python3-dev \
         python3-pip && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     pip3 -q install --upgrade \
         gunicorn \
         gevent \

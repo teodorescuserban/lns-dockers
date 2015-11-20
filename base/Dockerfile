@@ -21,4 +21,5 @@ RUN locale-gen en_US.UTF-8 && \
         python-software-properties \
         software-properties-common \
         telnet && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

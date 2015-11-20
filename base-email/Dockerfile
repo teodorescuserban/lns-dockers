@@ -8,4 +8,5 @@ RUN apt-get -qq -y update && \
         postfix-pcre \
         opendkim \
         opendkim-tools && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
