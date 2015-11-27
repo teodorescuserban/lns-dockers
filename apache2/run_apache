@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-mkdir -p /srv/www/${BASE_DIR}/logs /srv/www/${BASE_DIR}/www
+mkdir -p /srv/www /srv/logs
 
 cd /etc/apache2/sites-available
 envsubst < vhost.tpl > vhost.conf

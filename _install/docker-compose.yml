@@ -1,0 +1,21 @@
+# 2015 copyleft Serban Teodorescu 
+
+nginx:
+  extends:
+    file: lib/common.yml
+    service: nginx
+
+apache:
+  extends:
+    file: lib/common.yml
+    service: apache
+
+fpm:
+  extends:
+    file: lib/common.yml
+    service: fpm
+
+mysql:
+  extends:
+    file: lib/common.yml
+    service: mysql
