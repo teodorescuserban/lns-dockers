@@ -9,6 +9,7 @@ RUN sed -i 's/.*date.timezone =.*/date\.timezone = UTC/'                 /etc/ph
     sed -i 's/.*cgi.fix_pathinfo=.*/cgi.fix_pathinfo=0/'                 /etc/php5/fpm/php.ini && \
     sed -i -e "s/upload_max_filesize\s*=.*/upload_max_filesize = 100M/g" /etc/php5/fpm/php.ini && \
     sed -i -e "s/post_max_size\s*=.*/post_max_size = 100M/g"             /etc/php5/fpm/php.ini && \
+    echo "alias mysql='mysql -h ${MYSQL_ADDR} -P ${MYSQL_PORT} -u ${MYSQL_USER} -p ${MYSQL_DB}'" > /root/.bash_aliases && \
     mv /etc/php5/fpm/php-fpm.conf /etc/php5/fpm/php-fpm.orig && \
     mv /etc/php5/fpm/pool.d/www.conf /etc/php5/fpm/pool.d/www.orig && \
     mv /srv/php-fpm.conf /etc/php5/fpm/ && \
