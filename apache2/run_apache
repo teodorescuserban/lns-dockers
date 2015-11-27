@@ -3,6 +3,8 @@ set -e
 
 mkdir -p /srv/www /srv/logs
 
+[ -f /srv/www/test.html ] || echo "this is just a test." > /srv/www/test.html
+
 cd /etc/apache2/sites-available
 envsubst < vhost.tpl > vhost.conf
 
