@@ -56,8 +56,8 @@ def import_ssl_files_as_env_vars():
             crt = transform_file_to_string(crt_fh)
             # print crt
     elif run_or_not.lower() == 't':
-        key = transform_file_to_string('key.pem')
-        crt = transform_file_to_string('crt.pem')
+        key = transform_file_to_string('_example_key.pem')
+        crt = transform_file_to_string('_example_crt.pem')
     else:
         print 'Ok. Skipping.'
 
