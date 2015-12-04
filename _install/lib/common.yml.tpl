@@ -1,11 +1,18 @@
-# 2015 copyleft Serban Teodorescu 
+# 2015 copyleft "Serban Teodorescu <teodorescu.serban@gmail.com>"
 
 nginx:
   hostname: nginx
   restart: always
   image: ${BASE_IMG}nginx:latest
+  ports:
+    - "0.0.0.0:80:80"
+    - "0.0.0.0:443:443"
   env_file:
     - env_common
+    - env_nginx
+    - env_nginx_prv
+  environment:
+    - VIRTUAL_HOST=${DOMAIN},www.${DOMAIN}
 
 apache:
   hostname: apache
@@ -21,8 +28,6 @@ apache:
     - env_common
     - env_apache
     - env_fpm
-  environment:
-    - VIRTUAL_HOST=${DOMAIN},www.${DOMAIN}
 
 fpm:
   hostname: fpm

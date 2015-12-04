@@ -1,3 +1,5 @@
+# 2015 copyleft "Serban Teodorescu <teodorescu.serban@gmail.com>"
+
 function dops() { docker ps ; }
 function doex() { docker exec -it "$1" bash; }
 function dolo() { docker logs --tail=10 -f "$1" ; }

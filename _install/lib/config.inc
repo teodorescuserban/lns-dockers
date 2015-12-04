@@ -1,5 +1,5 @@
 #!/bin/bash
-# copyleft 2015 teodorescu.serban@gmail.com
+# 2015 copyleft "Serban Teodorescu <teodorescu.serban@gmail.com>"
 
 if [ -z $EDITOR ]; then
   which mcedit > /dev/null
@@ -22,14 +22,16 @@ $EDITOR vars
 
 echo "Creating docker-compose configuration file and env files..."
 
-source vars
+python config.py
 
-envsubst < common.tpl > common.yml
+#source vars
 
-for f in $(ls env_*.tpl | sed -e 's/\.tpl$//'); do
-    envsubst < $f.tpl > $f
-    sed -i 's/%/$/' $f
-done
+#envsubst < common.tpl > common.yml
+
+#for f in $(ls env_*.tpl | sed -e 's/\.tpl$//'); do
+#    envsubst < $f.tpl > $f
+#    sed -i 's/%/$/' $f
+#done
 
 echo "Done. Run me again after any changes in vars file."
 echo "You are ready to start the environment!"
