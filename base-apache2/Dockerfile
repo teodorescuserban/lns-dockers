@@ -4,7 +4,7 @@ MAINTAINER Serban Teodorescu, teodorescu.serban@gmail.com
 
 RUN apt-get -qq -y update && \
     apt-get install -qq -y \
-        apache2 && \
+        apache2 \
         libapache2-mod-rpaf && \
     apt-get clean && \
     a2enmod proxy_fcgi && \
