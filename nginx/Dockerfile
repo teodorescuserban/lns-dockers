@@ -2,7 +2,7 @@ FROM teodorescuserban/lns-base-nginx:latest
 
 MAINTAINER Serban Teodorescu, teodorescu.serban@gmail.com
 
-COPY run_nginx vhost.tpl /srv
+COPY run_nginx vhost.tpl /srv/
 
 RUN mv /srv/run_nginx /etc/service/nginx/run && \
     chmod +x /etc/service/nginx/run && \
