@@ -2,7 +2,8 @@ FROM teodorescuserban/lns-base:latest
 
 MAINTAINER Serban Teodorescu, teodorescu.serban@gmail.com
 
-RUN apt-get -qq update && \
+RUN add-apt-repository ppa:nginx/stable && \
+    apt-get -qq update && \
     apt-get install -qq -y \
         nginx-extras && \
     apt-get clean && \
