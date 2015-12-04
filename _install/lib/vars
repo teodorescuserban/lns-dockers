@@ -39,3 +39,6 @@ $e VOL_SITE=$BASE_DIR/www
 $e VOL_SITE_LOGS=$BASE_DIR/logs
 $e VOL_DB=$BASE_DIR/db
 #$e VOL_DB_LOGS=$BASE_DIR/db_logs
+
+$e SSL_KEY=
+$e SSL_CRT=
