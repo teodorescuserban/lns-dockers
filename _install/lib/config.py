@@ -69,7 +69,7 @@ def import_vars_as_env_vars():
     vars file, all substitution made'''
     env = {}
     env['DOCKER0_ADDR'] = get_ip_address('docker0')
-    with file('pyvars') as f:
+    with file('vars') as f:
         for l in f.readlines():
             l = l.rstrip()
             if (len(l) < 2) or ('=' not in l) or (l.startswith('#')):
