@@ -1,0 +1,7 @@
+# example: right after you import the variable named HDX_PREFIX,
+# create another variable named HDX_SHORT_PERFIX; the value of this new one
+# is computed by replacing <regex> with <subst> in HDX_PREFIX value
+CUSTOM_VARS = {
+    'HDX_PREFIX': ('HDX_SHORT_PREFIX', r'-$', ''),
+    'DOMAIN': ('DOMAIN_LABEL', r'\.ro$', 'ro'),
+}

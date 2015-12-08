@@ -1,0 +1,8 @@
+# where are your private files located and what are the variable names
+# you want to assign to the resulting imported string
+PRIVATE_FILES = {
+    'SSL_CRT': '_example_crt.pem',
+    'SSL_KEY': '_example_key.pem',
+    # 'SSH_PUB_KEY': 'ssh.pub',
+    # 'SSH_KEY': 'ssh.key',
+}
