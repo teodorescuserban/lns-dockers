@@ -41,6 +41,7 @@ ftp:
   env_file:
     - env_common
     - env_ftp
+    - env_ftp_prv
 
 fpm:
   hostname: fpm
