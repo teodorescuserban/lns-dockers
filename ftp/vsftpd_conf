@@ -13,3 +13,4 @@ chroot_local_user=YES
 hide_ids=YES
 xferlog_enable=YES
 allow_writeable_chroot=YES
+local_umask=022

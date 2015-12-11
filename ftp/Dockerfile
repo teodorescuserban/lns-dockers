@@ -14,6 +14,6 @@ RUN mv /srv/run_ftp /etc/service/ftp/run && \
 
 EXPOSE 21
 
-VOLUME ["/srv/www", "/var/log/ftp"]
+VOLUME ["/srv/ftp", "/var/log/ftp"]
 
 CMD ["/sbin/my_init"]

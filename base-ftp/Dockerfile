@@ -10,6 +10,8 @@ RUN apt-get -qq update && \
         lftp && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    install -m 755 -o root -g root -d /var/run/vsftpd && \
+    install -m 755 -o root -g root -d /var/run/vsftpd/empty && \
     mkdir -p /etc/service/ftp && \
     echo "#!/bin/sh\nset -e\nexec /usr/sbin/vsftpd\n" >> /etc/service/ftp/run && \
     chmod u+x /etc/service/ftp/run && \
