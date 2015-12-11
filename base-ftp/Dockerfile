@@ -5,7 +5,9 @@ MAINTAINER Serban Teodorescu, teodorescu.serban@gmail.com
 RUN apt-get -qq update && \
     apt-get install -qq -y \
         libpam-pwdfile \
-        vsftpd && \
+        vsftpd \
+        ncftp \
+        lftp && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     mkdir -p /etc/service/ftp && \
