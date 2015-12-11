@@ -6,7 +6,6 @@ RUN apt-get -qq update && \
     apt-get install -qq -y \
         libpam-pwdfile \
         vsftpd \
-        ncftp \
         lftp && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
