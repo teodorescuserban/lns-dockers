@@ -10,6 +10,11 @@ apache:
     file: lib/common.yml
     service: apache
 
+ftp:
+  extends:
+    file: lib/common.yml
+    service: ftp
+
 fpm:
   extends:
     file: lib/common.yml

@@ -29,6 +29,19 @@ apache:
     - env_apache
     - env_fpm
 
+ftp:
+  hostname: ftp
+  restart: always
+  image: ${BASE_IMG}ftp:latest
+  volumes:
+    - ${VOL_SITE}:/srv/www
+    - ${VOL_SITE_LOGS}:/srv/logs
+  ports:
+    - "${WB_ADDR}:${FTP_PORT}:21"
+  env_file:
+    - env_common
+    - env_ftp
+
 fpm:
   hostname: fpm
   restart: always
