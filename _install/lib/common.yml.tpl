@@ -38,6 +38,11 @@ ftp:
     - ${VOL_SITE_LOGS}:/srv/logs
   ports:
     - "${WB_ADDR}:${FTP_PORT}:21"
+    - "${WB_ADDR}:10091:10091"
+    - "${WB_ADDR}:10092:10092"
+    - "${WB_ADDR}:10093:10093"
+    - "${WB_ADDR}:10094:10094"
+    - "${WB_ADDR}:10095:10095"
   env_file:
     - env_common
     - env_ftp
