@@ -1,0 +1,14 @@
+#!/usr/bin/with-contenv sh
+
+cale=/srv/configs
+cfg=/etc/samba/smb.conf
+
+for fisier in $(ls $cale); do
+        if [ $(cat $cfg | grep -c "include = $cale/$fisier") -ne 0 ]; then
+                echo "am deja fisierul."
+        else
+                echo "include = $cale/$fisier" >> $cfg
+        fi
+done
+
+exec smbd -FS
