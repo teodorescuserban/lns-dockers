@@ -1,6 +1,6 @@
 FROM teodorescuserban/lns-alpine-base:latest
 
-COPY smb.conf smbd_run nmbd_run /srv
+COPY smb.conf smbd_run nmbd_run /srv/
 
 RUN apk update && \
     apk add samba && \
@@ -14,7 +14,7 @@ EXPOSE 139 445
 
 EXPOSE 137/udp 138/udp
 
-VOLUMES ["/srv/configs", "/srv/shares", "/var/log/samba"]
+VOLUME ["/srv/configs", "/srv/shares", "/var/log/samba"]
 
 ENTRYPOINT ["/init"]
 
