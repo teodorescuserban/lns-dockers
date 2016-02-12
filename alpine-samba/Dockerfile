@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM teodorescuserban/lns-alpine-base:latest
 
 COPY smb.conf smbd_run nmbd_run /srv
 
