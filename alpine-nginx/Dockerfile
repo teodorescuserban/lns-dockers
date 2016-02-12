@@ -1,4 +1,4 @@
-FROM lns-alpine-base:latest
+FROM teodorescuserban/lns-alpine-base:latest
 
 COPY nginx_run finish /srv /
 
