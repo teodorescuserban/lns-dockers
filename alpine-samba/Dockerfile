@@ -8,7 +8,7 @@ RUN apk update && \
     mkdir -p /etc/services.d/smbd /etc/services.d/nmbd /srv/shares /srv/configs && \
     mv /srv/smb.conf /etc/samba/ && \
     mv /srv/smbd_run /etc/services.d/smbd/run && \
-    mv /srv/nmbd_run /etc/services.d/nmbd/run && \
+    mv /srv/nmbd_run /etc/services.d/nmbd/run
 
 EXPOSE 139 445
 
