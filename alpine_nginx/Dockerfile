@@ -1,6 +1,6 @@
 FROM lns-alpine-base:latest
 
-COPY nginx_run finish /srv 
+COPY nginx_run finish /srv /
 
 RUN apk update && \
     apk add nginx && \
