@@ -4,7 +4,7 @@ MAINTAINER Serban Teodorescu, teodorescu.serban@gmail.com
 
 RUN apt-get -qq -y update && \
     apt-get install -qq -y \
-        mysql-server-5.5 \
+        mariadb \
         mysql-client-5.5 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
