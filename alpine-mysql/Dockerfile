@@ -1,4 +1,4 @@
-FROM lnsops/alpine-base-mysql
+FROM lnsops/base-mysql
 
 MAINTAINER Serban Teodorescu <teodorescu.serban@gmail.com>
 
